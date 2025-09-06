@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejen Hartanah Moden - Cari Rumah Impian Anda</title>
+    <meta name="description" content="Ejen hartanah profesional dengan teknologi moden. Cari rumah, kondominium, atau hartanah komersial di Klang Valley dengan mudah.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-home"></i>
+                <span>HartanahModen</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Utama</a>
+                <a href="#properties" class="nav-link">Hartanah</a>
+                <a href="#services" class="nav-link">Perkhidmatan</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#contact" class="nav-link">Hubungi</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80" alt="Modern Property">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">Cari Rumah Impian</span>
+                        <span class="title-accent">di Klang Valley</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Platform hartanah moden dengan teknologi terkini. Lebih dari 5,000 hartanah tersedia dengan proses yang mudah dan pantas.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5000">0</div>
+                            <div class="stat-label">Hartanah Tersedia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="250">0</div>
+                            <div class="stat-label">Hartanah Terjual</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Hari Purata Jual</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-search">
+                    <div class="search-container">
+                        <div class="search-tabs">
+                            <button class="search-tab active" data-type="buy">Beli</button>
+                            <button class="search-tab" data-type="rent">Sewa</button>
+                        </div>
+                        <form class="search-form">
+                            <div class="search-row">
+                                <div class="search-field">
+                                    <label><i class="fas fa-map-marker-alt"></i> Lokasi</label>
+                                    <select class="search-input" id="location">
+                                        <option value="">Pilih Lokasi</option>
+                                        <option value="klcc">KLCC</option>
+                                        <option value="mont-kiara">Mont Kiara</option>
+                                        <option value="bangsar">Bangsar</option>
+                                        <option value="damansara">Damansara</option>
+                                        <option value="putrajaya">Putrajaya</option>
+                                    </select>
+                                </div>
+                                <div class="search-field">
+                                    <label><i class="fas fa-home"></i> Jenis Hartanah</label>
+                                    <select class="search-input" id="property-type">
+                                        <option value="">Semua Jenis</option>
+                                        <option value="condo">Kondominium</option>
+                                        <option value="terrace">Rumah Teres</option>
+                                        <option value="semi-d">Semi-D</option>
+                                        <option value="bungalow">Banglo</option>
+                                        <option value="commercial">Komersial</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search-row">
+                                <div class="search-field budget-field">
+                                    <label><i class="fas fa-dollar-sign"></i> Budget</label>
+                                    <div class="budget-range">
+                                        <select class="search-input" id="min-price">
+                                            <option value="">Min Harga</option>
+                                            <option value="300000">RM 300,000</option>
+                                            <option value="500000">RM 500,000</option>
+                                            <option value="800000">RM 800,000</option>
+                                            <option value="1000000">RM 1,000,000</option>
+                                        </select>
+                                        <span class="range-separator">hingga</span>
+                                        <select class="search-input" id="max-price">
+                                            <option value="">Max Harga</option>
+                                            <option value="500000">RM 500,000</option>
+                                            <option value="800000">RM 800,000</option>
+                                            <option value="1000000">RM 1,000,000</option>
+                                            <option value="2000000">RM 2,000,000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-field">
+                                    <label><i class="fas fa-bed"></i> Bilik Tidur</label>
+                                    <select class="search-input" id="bedrooms">
+                                        <option value="">Semua</option>
+                                        <option value="1">1 Bilik</option>
+                                        <option value="2">2 Bilik</option>
+                                        <option value="3">3 Bilik</option>
+                                        <option value="4">4+ Bilik</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search-actions">
+                                <button type="button" class="search-btn primary">
+                                    <i class="fas fa-search"></i>
+                                    <span>Cari Hartanah</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Showcase -->
+    <section id="properties" class="property-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hartanah Pilihan</h2>
+                <p class="section-subtitle">Jelajahi koleksi hartanah terbaik di Klang Valley</p>
+            </div>
+            
+            <div class="property-filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="condo">Kondominium</button>
+                    <button class="filter-btn" data-filter="terrace">Rumah Teres</button>
+                    <button class="filter-btn" data-filter="semi-d">Semi-D</button>
+                    <button class="filter-btn" data-filter="commercial">Komersial</button>
+                </div>
+                <div class="filter-sort">
+                    <select class="sort-select">
+                        <option value="newest">Terbaru</option>
+                        <option value="price-low">Harga Rendah</option>
+                        <option value="price-high">Harga Tinggi</option>
+                        <option value="popular">Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-card" data-type="condo" data-price="850000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern Condominium">
+                        <div class="property-badge new">Baru</div>
+                        <div class="property-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn" title="Lihat Gambar">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="Simpan">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Kondominium Moden KLCC</h3>
+                            <div class="property-price">RM 850,000</div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>KLCC, Kuala Lumpur</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 Bilik</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Bilik Air</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>2 Kereta</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>1,200 sqft</span>
+                            </div>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Agent">
+                                <span>Ahmad Rahman</span>
+                            </div>
+                            <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="terrace" data-price="650000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Terrace House">
+                        <div class="property-badge hot">Hot</div>
+                        <div class="property-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn" title="Lihat Gambar">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="Simpan">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Rumah Teres Subang Jaya</h3>
+                            <div class="property-price">RM 650,000</div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Subang Jaya, Selangor</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Bilik</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>3 Bilik Air</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>2 Kereta</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>2,000 sqft</span>
+                            </div>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Agent">
+                                <span>Siti Aminah</span>
+                            </div>
+                            <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="semi-d" data-price="1200000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c699f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Semi-D House">
+                        <div class="property-badge premium">Premium</div>
+                        <div class="property-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn" title="Lihat Gambar">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="Simpan">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Semi-D Damansara</h3>
+                            <div class="property-price">RM 1,200,000</div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Damansara, Selangor</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>5 Bilik</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>4 Bilik Air</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>3 Kereta</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>3,500 sqft</span>
+                            </div>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Agent">
+                                <span>Muhammad Ali</span>
+                            </div>
+                            <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="condo" data-price="450000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Affordable Condo">
+                        <div class="property-badge affordable">Mampu Milik</div>
+                        <div class="property-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn" title="Lihat Gambar">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="Simpan">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Apartmen Shah Alam</h3>
+                            <div class="property-price">RM 450,000</div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Shah Alam, Selangor</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Bilik</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Bilik Air</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>1 Kereta</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>900 sqft</span>
+                            </div>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Agent">
+                                <span>Fatimah Zahra</span>
+                            </div>
+                            <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="commercial" data-price="2000000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Commercial Property">
+                        <div class="property-badge commercial">Komersial</div>
+                        <div class="property-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn" title="Lihat Gambar">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="Simpan">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Bangunan Pejabat KL</h3>
+                            <div class="property-price">RM 2,000,000</div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kuala Lumpur City</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-building"></i>
+                                <span>5 Tingkat</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>20 Kereta</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>10,000 sqft</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-elevator"></i>
+                                <span>2 Lif</span>
+                            </div>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Agent">
+                                <span>Hassan Abdullah</span>
+                            </div>
+                            <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="terrace" data-price="750000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Terrace House">
+                        <div class="property-badge luxury">Luxury</div>
+                        <div class="property-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn" title="Lihat Gambar">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn" title="Simpan">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Rumah Teres Bangsar</h3>
+                            <div class="property-price">RM 750,000</div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bangsar, Kuala Lumpur</span>
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Bilik</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>3 Bilik Air</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>2 Kereta</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>2,200 sqft</span>
+                            </div>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-agent">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Agent">
+                                <span>Ahmad Rahman</span>
+                            </div>
+                            <a href="https://wa.me/60123456789" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>Muat Lebih Banyak</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perkhidmatan Kami</h2>
+                <p class="section-subtitle">Kami menyediakan perkhidmatan lengkap untuk keperluan hartanah anda</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="service-title">Cari Hartanah</h3>
+                    <p class="service-description">Kami membantu anda mencari hartanah yang sesuai dengan keperluan dan bajet anda.</p>
+                    <a href="#properties" class="service-link">Pelajari Lebih Lanjut</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Nilai Hartanah</h3>
+                    <p class="service-description">Dapatkan penilaian profesional untuk hartanah anda dengan teknologi terkini.</p>
+                    <a href="#contact" class="service-link">Dapatkan Penilaian</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="service-title">Jual Hartanah</h3>
+                    <p class="service-description">Kami membantu menjual hartanah anda dengan harga terbaik dan proses yang mudah.</p>
+                    <a href="#contact" class="service-link">Jual Sekarang</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="service-title">Dokumen Undang-Undang</h3>
+                    <p class="service-description">Bantuan lengkap untuk semua dokumen undang-undang dan proses pembelian.</p>
+                    <a href="#contact" class="service-link">Konsultasi Percuma</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Apa Kata Pelanggan</h2>
+                <p class="section-subtitle">Pengalaman sebenar dari pelanggan kami</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Perkhidmatan yang sangat profesional dan membantu. Mereka membantu saya mencari rumah impian dalam masa yang singkat."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer">
+                            <div class="author-info">
+                                <h4 class="author-name">Ahmad Rahman</h4>
+                                <p class="author-title">Pembeli Rumah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Proses jual rumah sangat mudah dan pantas. Harga yang diperoleh juga melebihi jangkaan saya."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer">
+                            <div class="author-info">
+                                <h4 class="author-name">Siti Aminah</h4>
+                                <p class="author-title">Penjual Hartanah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Konsultasi yang diberikan sangat membantu dalam membuat keputusan pembelian hartanah."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer">
+                            <div class="author-info">
+                                <h4 class="author-name">Muhammad Ali</h4>
+                                <p class="author-title">Pelabur Hartanah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Tentang Kami</h2>
+                    <p class="about-description">
+                        HartanahModen adalah platform hartanah moden yang menggunakan teknologi terkini untuk membantu anda mencari, membeli, atau menjual hartanah dengan mudah dan pantas.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Teknologi Moden</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Perkhidmatan Profesional</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Proses Mudah & Pantas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Konsultasi Percuma</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5000">0</div>
+                            <div class="stat-label">Hartanah Tersedia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="250">0</div>
+                            <div class="stat-label">Hartanah Terjual</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="98">0</div>
+                            <div class="stat-label">% Kepuasan Pelanggan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-subtitle">Dapatkan konsultasi percuma untuk keperluan hartanah anda</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p>+60 12-345 6789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>+60 12-345 6789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@hartanahmoden.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Alamat</h3>
+                            <p>Kuala Lumpur City Centre<br>Kuala Lumpur, Malaysia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="name">Nama Penuh</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Perkhidmatan</label>
+                            <select id="service" name="service" required>
+                                <option value="">Pilih Perkhidmatan</option>
+                                <option value="buy">Beli Hartanah</option>
+                                <option value="sell">Jual Hartanah</option>
+                                <option value="rent">Sewa Hartanah</option>
+                                <option value="valuation">Nilai Hartanah</option>
+                                <option value="consultation">Konsultasi</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesej</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Ceritakan keperluan hartanah anda..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Hantar Mesej</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-home"></i>
+                        <span>HartanahModen</span>
+                    </div>
+                    <p class="footer-description">
+                        Platform hartanah moden dengan teknologi terkini untuk membantu anda mencari rumah impian di Klang Valley.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Perkhidmatan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#properties">Cari Hartanah</a></li>
+                        <li><a href="#services">Jual Hartanah</a></li>
+                        <li><a href="#services">Nilai Hartanah</a></li>
+                        <li><a href="#contact">Konsultasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Lokasi</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Kuala Lumpur</a></li>
+                        <li><a href="#">Selangor</a></li>
+                        <li><a href="#">Putrajaya</a></li>
+                        <li><a href="#">Klang Valley</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Hubungi</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +60 12-345 6789</p>
+                        <p><i class="fas fa-envelope"></i> info@hartanahmoden.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> KLCC, Kuala Lumpur</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 HartanahModen. Hak Cipta Terpelihara.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Dasar Privasi</a>
+                    <a href="#">Terma & Syarat</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/60123456789" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+            <span class="float-text">WhatsApp</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
